@@ -15,11 +15,15 @@
 /* defined the LED0 pin: PA5 */
 #define LED0_PIN               GET_PIN(A, 5)
 
+extern void car_init(void *parameter);
+
 int main(void)
 {
     int count = 1;
     /* set LED0 pin mode to output */
     rt_pin_mode(LED0_PIN, PIN_MODE_OUTPUT);
+
+    car_init(0);
 
     while (count++)
     {

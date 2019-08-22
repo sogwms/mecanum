@@ -39,8 +39,9 @@
 #define RT_USING_CONSOLE
 #define RT_CONSOLEBUF_SIZE 128
 #define RT_CONSOLE_DEVICE_NAME "uart2"
-#define RT_VER_NUM 0x40001
+#define RT_VER_NUM 0x40002
 #define ARCH_ARM
+#define RT_USING_CPU_FFS
 #define ARCH_ARM_CORTEX_M
 #define ARCH_ARM_CORTEX_M4
 
@@ -80,9 +81,7 @@
 #define RT_USING_SERIAL
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
-
-/* Using WiFi */
-
+#define RT_USING_PWM
 
 /* Using USB */
 
@@ -95,10 +94,10 @@
 /* Socket abstraction layer */
 
 
+/* Network interface device */
+
+
 /* light weight TCP/IP stack */
-
-
-/* Modbus master and slave stack */
 
 
 /* AT commands */
@@ -140,6 +139,9 @@
 
 /* system packages */
 
+#define PKG_USING_ROBOTS
+#define PKG_USING_ROBOTS_LATEST_VERSION
+#define PKG_ROBOT_VER_NUM 0x99999
 
 /* peripheral libraries and drivers */
 
@@ -163,6 +165,18 @@
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_UART2
+#define BSP_USING_UART6
+#define BSP_USING_PWM
+#define BSP_USING_PWM1
+#define BSP_USING_PWM1_CH4
+#define BSP_USING_PWM2
+#define BSP_USING_PWM2_CH2
+#define BSP_USING_PWM2_CH3
+#define BSP_USING_PWM3
+#define BSP_USING_PWM3_CH1
+#define BSP_USING_PWM3_CH2
+#define BSP_USING_PWM4
+#define BSP_USING_PWM4_CH1
 
 /* Board extended module Drivers */
 
