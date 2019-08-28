@@ -80,14 +80,14 @@ void car_thread(void *param)
     chassis_set_velocity(chas, target_velocity);
 
     // Open loop control
-    // controller_disable(chas->c_wheels[0]->w_controller);
+    controller_disable(chas->c_wheels[0]->w_controller);
     controller_disable(chas->c_wheels[1]->w_controller);
     controller_disable(chas->c_wheels[2]->w_controller);
     controller_disable(chas->c_wheels[3]->w_controller);
 
-    motor_disable(chas->c_wheels[1]->w_motor);
-    motor_disable(chas->c_wheels[2]->w_motor);
-    motor_disable(chas->c_wheels[3]->w_motor);
+    // motor_disable(chas->c_wheels[1]->w_motor);
+    // motor_disable(chas->c_wheels[2]->w_motor);
+    // motor_disable(chas->c_wheels[3]->w_motor);
 
     // Sender
     command_sender_t ano_sender = ano_get_sender();
